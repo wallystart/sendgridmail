@@ -10,7 +10,7 @@ from msrestazure.azure_active_directory import AdalAuthentication
 from msrestazure.azure_cloud import AZURE_PUBLIC_CLOUD
 from datetime import datetime, timedelta
 import os
-
+ 
 TENANT_ID = os.environ.get('USR_AZURE_TENANT_ID')
 CLIENT = os.environ.get('USR_AZURE_CLIENT_ID')
 KEY = os.environ.get('USR_AZURE_KEY')
