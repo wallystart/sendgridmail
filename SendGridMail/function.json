@@ -1,0 +1,30 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name":"req",
+      "from_email": "req",
+      "to_emails": "req",
+      "subject": "req",
+      "html_content": "req",
+      "is_failed": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name":"$return",
+      "from_email": "$return",
+      "to_emails": "$return",
+      "subject": "$return",
+      "html_content": "$return",
+      "is_failed": "$return"
+    }
+  ]
+}

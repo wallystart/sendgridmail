@@ -1,0 +1,12 @@
+{
+    "from_email": "example@example.com",
+    "to_emails": "jbiltes@piconsulting.com.ar",
+    "subject": "Test sentgrid",
+    "html_content": "Test mail",
+    "is_failed": "True",
+    "pipeline_data":{
+        "run_id": "a82be75f-d177-438e-a2d7-9dbe3b35b56c",
+        "start_time": "10/24/2019 00:00:00",
+        "end_time": "10/25/2019 23:30:00"
+    }
+}

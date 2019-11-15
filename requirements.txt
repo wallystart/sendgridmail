@@ -1,0 +1,5 @@
+azure-functions
+sendgrid
+azure
+adal
+msrestazure

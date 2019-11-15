@@ -1,0 +1,57 @@
+Header
+Content-Type = application/json
+Accept = application/json
+
+Body FAILURE v1
+{
+    "from_email": "GDM-DataFactory@example.com",
+    "to_emails": ["jbiltes@piconsulting.com.ar","julianbiltes@gmail.com"],
+    "subject": "Error Data Factory: @{pipeline().DataFactory} - Pipeline: @{pipeline().Pipeline}",
+    "html_content": "<p><strong>ADVERTENCIA: ¡No responder este mail! </strong><br><br><strong>Se produjo un error en el Data Factory:</strong> @{pipeline().DataFactory}<br>\n<strong>En el Pipeline:</strong>@{pipeline().Pipeline}<br>\n<strong>En el Trigger:</strong> @{pipeline().TriggerName}<br>\n<strong>En la hora:</strong> @{formatDateTime(addhours(utcnow(),-3),'dd/MM/yyyy HH:mm:ss')} <br><br>Favor de comunicarse con el administrador.<br>\n</p>",
+    "is_failed": "True" 
+    "pipeline_data":{
+        "run_id": "@{pipeline().RunId}",
+        "start_time": "@{formatDateTime(addhours(utcnow(),-27),'MM/dd/yyyy HH:mm:ss')}",
+        "end_time": "@{formatDateTime(addhours(utcnow(),27),'MM/dd/yyyy HH:mm:ss')}"
+    }
+}
+
+Body SUCCESS
+
+		{
+			"from_email": "GDM-DataFactory@example.com",
+			"to_emails": ["jbiltes@piconsulting.com.ar","exampleMail2@gmail.com"],
+			"subject": "Ejecucion Data Factory: @{pipeline().DataFactory} - Pipeline: @{pipeline().Pipeline}",
+			"html_content": "<p><strong>ADVERTENCIA: ¡No responder este mail! </strong><br><br><strong>Se ejecuto correctamente un pipeline en el Data Factory:</strong> @{pipeline().DataFactory}<br>\n<strong>Pipeline:</strong>@{pipeline().Pipeline}<br>\n<strong>Trigger:</strong> @{pipeline().TriggerName}<br>\n<strong>Fecha y hora:</strong> @{formatDateTime(addhours(utcnow(),-3),'dd/MM/yyyy HH:mm:ss')} <br><br>Saludos.<br>\n</p>",
+			"is_failed": "False" 
+		}
+
+Body para test
+{
+    "from_email": "GDM-DataFactory@example.com",
+    "to_emails": ["jbiltes@piconsulting.com.ar","mzurita@piconsulting.com.ar", "Jjaymez@piconsulting.com.ar", "gdiaz@piconsulting.com.ar","soliva@piconsulting.com.ar" ],
+    "subject": "Error Data Factory: @{pipeline().DataFactory} - Pipeline: @{pipeline().Pipeline}",
+    "html_content": "<p> Avisen si les llega! (julian) <br><strong>ADVERTENCIA: ¡No responder este mail! </strong><br><br><strong>Rompimo todo en el Data Factory:</strong> @{pipeline().DataFactory}<br>\n<strong>En el Pipeline:</strong>@{pipeline().Pipeline}<br>\n<strong>En el Trigger:</strong> @{pipeline().TriggerName}<br>\n<strong>Fecha y hora del bardo:</strong> @{formatDateTime(addhours(utcnow(),-3),'dd/MM/yyyy HH:mm:ss')} <br><br>Favor de evitar comunicarse con el administrador. Gracias!<br>\n</p>",
+    "is_failed": "True",
+    "pipeline_data":{
+        "run_id": "a82be75f-d177-438e-a2d7-9dbe3b35b56c",
+        "start_time": "10/24/2019 00:00:00",
+        "end_time": "10/25/2019 23:30:00"
+    }
+}
+
+body para test simple
+{
+    "from_email": "example@example.com",
+    "to_emails": "jbiltes@piconsulting.com.ar",
+    "subject": "Test sentgrid",
+    "html_content": "Test mail",
+    "api_key": "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",
+    "is_failed": "True",
+    "pipeline_data":{
+        "run_id": "a82be75f-d177-438e-a2d7-9dbe3b35b56c",
+        "start_time": "10/24/2019 00:00:00",
+        "end_time": "10/25/2019 23:30:00"
+    }
+}
+
